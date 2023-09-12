@@ -327,9 +327,11 @@ table.pagTbl td.typeP3 {background-color: #ffeff6;} /* 탁한 연두 */
     overflow-y: scroll;
 }
 
-/* .toggleCon{
-    animation: fadeInDown 1s;
-} */
+.toggleCon{
+    overflow: hidden;
+    transition: height 0.3s ease;
+    /* animation: fadeInDown 1s; */
+}
 
 div.detail + div.detail {margin-top: 30px;}
 div.detail .toggleMenu {}

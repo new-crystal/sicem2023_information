@@ -103,23 +103,23 @@ const target =  new URLSearchParams(window.location.search).get("target");
 }
 
 platinum_menu_container.addEventListener("click", (e)=>{
-    location.href = `/public/booth_layout.html?sponsor=platinum&target=${e.target.id}`
+    location.href = `?sponsor=platinum&target=${e.target.id}`
 })
 
 gold_menu_container.addEventListener("click", (e)=>{
-    location.href = `/public/booth_layout.html?sponsor=gold&target=${e.target.id}`
+    location.href = `?sponsor=gold&target=${e.target.id}`
 })
 
 silver_menu_container.addEventListener("click", (e)=>{
-    location.href = `/public/booth_layout.html?sponsor=silver&target=${e.target.id}`
+    location.href = `?sponsor=silver&target=${e.target.id}`
 })
 
 bronze_menu_container.addEventListener("click", (e)=>{
-    location.href = `/public/booth_layout.html?sponsor=bronze&target=${e.target.id}`
+    location.href = `?sponsor=bronze&target=${e.target.id}`
 })
 
 standard_menu_container.addEventListener("click", (e)=>{
-    location.href = `/public/booth_layout.html?sponsor=standard&target=${e.target.id}`
+    location.href = `?sponsor=standard&target=${e.target.id}`
 })
 
 
