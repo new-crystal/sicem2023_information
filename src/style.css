@@ -25,6 +25,8 @@ button {word-break:normal; font-family: 'Roboto-Regular', 'NotoSansKR Regular', 
 
 html, body {width: 100%;margin: 0;padding: 0;}
 
+p{margin: 0;}
+
 dl#skipNavi, dl#skipNavi dt, dl#skipNavi dd, dl#skipNavi a {margin: 0;padding: 0;text-decoration: none;}
 dl#skipNavi {visibility: hidden;height: 0;line-height: 0;font-size: 0;text-indent: -10000px;}
 
@@ -338,13 +340,13 @@ div.detail .toggleMenu {}
 div.detail .toggleMenu dt {position:relative; padding:15px 30px; background:#3F66B0; color:#444; box-sizing:border-box; font-size:15px; font-family: 'Roboto-Regular', sans-serif;}
 div.detail .toggleMenu dt b{font-size:18px;display: block; font-family: 'Roboto-Bold', sans-serif;}
 div.detail .toggleMenu dt a.trigger {position:absolute; top:32px; right:30px; padding:5px 25px 5px 10px; background:#fff; font-size:14px; color:#122d6b; text-decoration:none; font-family: 'Roboto-Light', sans-serif;}
-div.detail .toggleMenu dt a.trigger::after {content:""; position:absolute; width:9px; height:9px; top:11px; right:10px; background-image: url('/image/sub/toggle_plus.png');}
-div.detail .toggleMenu dt.view a.trigger::after {background-image: url('/image/sub/toggle_minus.png');}
+div.detail .toggleMenu dt a.trigger::after{content:""; position:absolute; width:9px; height:9px; top:11px; right:10px; background-image: url('../public/assets/program/toggle_plus.png');}
+div.detail .toggleMenu dt.view a.trigger::after {background-image: url('../public/assets/program/toggle_minus.png');}
 div.detail .toggleMenu dd.toggleCon {margin:0;}
 div.detail .toggleMenu dd.toggleCon div.bgTxt {margin:0; padding:30px;}
 
 div.detail table.tblDef {border-top:1px solid #d5d5d5; border-right:none; border-bottom:1px solid #122d6b;}
-div.detail table.tblDef > * tr > * {padding:10px 15px; border-left:1px solid #d5d5d5;}
+div.detail table.tblDef > * tr > * {padding:10px 15px; border-left:1px solid #d5d5d5;border-bottom: 1px solid #d5d5d5!important;}
 div.detail table.tblDef > * tr > *:first-child {border-left: none;}
 div.detail table.tblDef > * tr td {text-align:center; font-size:15px;}
 div.detail table.tblDef > * tr td:nth-child(3) {text-align: left;}
@@ -353,6 +355,13 @@ div.detail table.tblDef > * tr td.panel{background-color:#fbeddf;color:#572c00;t
 
 div.detail table.tblDef thead th,
 div.detail table.tblDef .bdLeft + td {text-align: left;}
+.border-left{
+    border-left: 1px solid #d5d5d5!important;
+}
+
+.tblDef tr {
+    border-bottom: 1px solid #d5d5d5!important;
+}
 
 ul.subMenu.detail {display: grid;grid-template-columns: repeat(7, 1fr);grid-template-rows: repeat(2, 1fr);margin-bottom: 50px;}
 ul.subMenu.detail li {}
@@ -523,6 +532,21 @@ dl.official li span {display: inline-block;vertical-align: top;margin-right: 4px
     height: 60px;
 }
 
+.sponsor_logo_box{
+    /* background-color: #009aa8; */
+    width: 980px;
+    height: 114px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top:815px;
+    left:50px;
+}
+
+.sponsor_logo{
+    height: 100%;
+}
 .platinum_menu_container{
     height: 250px;
     display: flex;
@@ -678,4 +702,106 @@ dl.official li span {display: inline-block;vertical-align: top;margin-right: 4px
      /* background-color: #00b050; */
      width: 310px;
      height: 73px;
+}
+
+/** S-info */
+
+.wifi_info{
+    width: 980px;
+    height: 1061px;
+    position: absolute;
+    top: 200px;
+    left:50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wifi_info > p{
+    font-size: 60px;
+    font-weight: bold;
+    color: #0086FF;
+    margin: 0;
+}
+
+.preview_room{
+    width: 980px;
+    height: 265px;
+    position: absolute;
+    top: 360px;
+    left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blue_box{
+    /* width: 342px; */
+    height: 190px;
+    /* border-right: 1px solid #0086FF; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+
+.blue_box > p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 27px;
+    font-weight: bold;
+    color: #0086FF;
+}
+
+.black_box{
+    height: 190px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blue_bar{
+    width: 3px;
+    height: 190px;
+    background-color: #0086FF;
+}
+
+.black_box  p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 27px;
+    /* font-weight: bold; */
+}
+
+.registration_desk{
+    width: 980px;
+    height: 265px;
+    position: absolute;
+    top: 360px;
+    left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.poster{
+    width: 830px;
+    height: 149px;
+    position: absolute;
+    top: 415px;
+    left: 123px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prayer_room{
+    width: 980px;
+    height: 265px;
+    position: absolute;
+    top: 360px;
+    left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

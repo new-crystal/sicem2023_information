@@ -6,6 +6,7 @@ const gold_menu_container = document.querySelector(".gold_menu_container");
 const silver_menu_container = document.querySelector(".silver_menu_container");
 const bronze_menu_container = document.querySelector(".bronze_menu_container");
 const standard_menu_container = document.querySelector(".standard_menu_container");
+const sponsor_logo = document.querySelector(".sponsor_logo")
 const mark =  document.querySelector(".location");
 
 detailMenuList.forEach((detailMenu)=>{
@@ -34,6 +35,7 @@ const target =  new URLSearchParams(window.location.search).get("target");
         if(target){
             backgroundImg.src = "./assets/booth_layout/booth_layout_p_1.png"
             mark.style.display = "";
+            sponsor_logo.src = `./assets/sponsor/${target}.png`
         }else{
             backgroundImg.src = "./assets/platinum.png"
             mark.style.display = "none";
@@ -48,6 +50,7 @@ const target =  new URLSearchParams(window.location.search).get("target");
         if(target){
             backgroundImg.src = "./assets/booth_layout/booth_layout_g_1.png"
             mark.style.display = "";
+            sponsor_logo.src = `./assets/sponsor/${target}.png`
         }else{
             backgroundImg.src = "./assets/booth_layout/booth_layout_g.png"
             mark.style.display = "none";
@@ -62,6 +65,7 @@ const target =  new URLSearchParams(window.location.search).get("target");
         if(target){
             backgroundImg.src = "./assets/booth_layout/booth_layout_s_1.png"
             mark.style.display = "";
+            sponsor_logo.src = `./assets/sponsor/${target}.png`
         }else{
             backgroundImg.src = "./assets/booth_layout/booth_layout_s.png"
             mark.style.display = "none";
@@ -76,6 +80,7 @@ const target =  new URLSearchParams(window.location.search).get("target");
         if(target){
             backgroundImg.src = "./assets/booth_layout/booth_layout_b_1.png"
             mark.style.display = "";
+            sponsor_logo.src = `./assets/sponsor/${target}.png`
         }else{
             backgroundImg.src = "./assets/booth_layout/booth_layout_b.png"
             mark.style.display = "none";
@@ -90,6 +95,7 @@ const target =  new URLSearchParams(window.location.search).get("target");
         if(target){
             backgroundImg.src = "./assets/booth_layout/booth_layout_etc_1.png"
             mark.style.display = "";
+            sponsor_logo.src = `./assets/sponsor/${target}.png`
         }else{
             backgroundImg.src = "./assets/booth_layout/booth_layout_etc.png"
             mark.style.display = "none";
@@ -124,3 +130,17 @@ standard_menu_container.addEventListener("click", (e)=>{
 
 
 window.onload = changeBackgroundImg()
+
+    /**우클릭 방지 */
+    document.addEventListener("contextmenu", function(event) {
+        event.preventDefault();
+    }, false);
+
+          /**확대 축소 방지 */
+          document.body.addEventListener('touchstart', function(e) {
+            if ( (e.touches.length > 1) || e.targetTouches.length > 1) {
+              e.preventDefault();
+              e.stopPropagation();
+              e.stopImmediatePropagation();
+            }
+          }, {passive: false});

@@ -90,37 +90,6 @@ function hideToggle(){
     })
 }
 
-// triggerList.forEach((trigger) => {
-//     trigger.addEventListener("click", function (event) {
-//       event.preventDefault();
-  
-//       const parent = this.parentElement.parentElement;
-//       const sClass = this.parentElement.getAttribute("class");
-  
-//       if (sClass !== "view") {
-//         this.parentElement.classList.add("view");
-//         const iElement = this.querySelector("i");
-//         if (iElement) {
-//           iElement.className = iElement.className.replace("-down", "-up");
-//         }
-//         const toggleCon = parent.querySelector(".toggleCon");
-//         if (toggleCon) {
-//           toggleCon.style.display = "block";
-//         }
-//       } else {
-//         this.parentElement.classList.remove("view");
-//         const iElement = this.querySelector("i");
-//         if (iElement) {
-//           iElement.className = iElement.className.replace("-up", "-down");
-//         }
-//         const toggleCon = parent.querySelector(".toggleCon");
-//         if (toggleCon) {
-//           toggleCon.style.display = "none";
-//         }
-//       }
-//     });
-//   });
-  
 
 function showScientificProgram(){
   programList.forEach((program)=>{
@@ -175,3 +144,18 @@ function showScientificProgram(){
 
 
 window.onload = programMenuOn()
+
+
+    /**우클릭 방지 */
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault();
+  }, false);
+
+        /**확대 축소 방지 */
+        document.body.addEventListener('touchstart', function(e) {
+          if ( (e.touches.length > 1) || e.targetTouches.length > 1) {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+          }
+        }, {passive: false});
