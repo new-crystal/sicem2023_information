@@ -20,3 +20,8 @@ detailMenuList.forEach((detailMenu)=>{
               e.stopImmediatePropagation();
             }
           }, {passive: false});
+
+          // 선택을 방지합니다.
+document.addEventListener("selectstart", function (event) {
+  event.preventDefault(); // 선택을 방지합니다.
+});
