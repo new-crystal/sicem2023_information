@@ -8,6 +8,10 @@ const bronze_menu_container = document.querySelector(".bronze_menu_container");
 const standard_menu_container = document.querySelector(".standard_menu_container");
 const sponsor_logo = document.querySelector(".sponsor_logo")
 const mark =  document.querySelector(".location");
+const platinumSponsorList = document.querySelectorAll(".platinum_sponsor");
+const goldSponsorList = document.querySelectorAll(".gold_sponsor");
+const silverSponsorList = document.querySelectorAll(".silver_sponsor");
+const bronzeSponsorList = document.querySelectorAll(".bronze_sponsor")
 
 detailMenuList.forEach((detailMenu)=>{
     detailMenu.addEventListener("click", ()=>{
@@ -20,10 +24,10 @@ sponsorMenu.addEventListener("click", (e)=>{
 })
 
 function changeBackgroundImg(){
-    const sponsorGrade = new URLSearchParams(window.location.search).get("sponsor");
+const sponsorGrade = new URLSearchParams(window.location.search).get("sponsor");
 const target =  new URLSearchParams(window.location.search).get("target");
     if(location.search === ""){
-        backgroundImg.src = "./assets/platinum.png"
+        backgroundImg.src = "./assets/booth_layout/booth_layout_p_1.png"
         mark.style.display = "none";
         platinum_menu_container.style.display = "";
         gold_menu_container.style.display = "none";
@@ -33,11 +37,16 @@ const target =  new URLSearchParams(window.location.search).get("target");
     }
     else if(sponsorGrade === "platinum"){
         if(target){
-            backgroundImg.src = "./assets/booth_layout/booth_layout_p_1.png"
+            backgroundImg.src = "./assets/booth_layout/booth_layout_p.png"
             mark.style.display = "";
             sponsor_logo.src = `./assets/sponsor/${target}.png`
+            platinumSponsorList.forEach((sponsor)=>{
+                if(sponsor.id === target){
+                    sponsor.style.backgroundImage = `url(./assets/sponsor/${target}_1.png)`;
+                }
+            })
         }else{
-            backgroundImg.src = "./assets/platinum.png"
+            backgroundImg.src = "./assets/booth_layout/booth_layout_p_1.png"
             mark.style.display = "none";
         }
         platinum_menu_container.style.display = "";
@@ -48,11 +57,16 @@ const target =  new URLSearchParams(window.location.search).get("target");
     }
     else if(sponsorGrade === "gold"){
         if(target){
-            backgroundImg.src = "./assets/booth_layout/booth_layout_g_1.png"
+            backgroundImg.src = "./assets/booth_layout/booth_layout_g.png"
             mark.style.display = "";
             sponsor_logo.src = `./assets/sponsor/${target}.png`
+            goldSponsorList.forEach((sponsor)=>{
+                if(sponsor.id === target){
+                    sponsor.style.backgroundImage = `url(./assets/sponsor/${target}_1.png)`;
+                }
+            })
         }else{
-            backgroundImg.src = "./assets/booth_layout/booth_layout_g.png"
+            backgroundImg.src = "./assets/booth_layout/booth_layout_g_1.png"
             mark.style.display = "none";
         }
         platinum_menu_container.style.display = "none";
@@ -63,11 +77,16 @@ const target =  new URLSearchParams(window.location.search).get("target");
     }
     else if(sponsorGrade === "silver"){
         if(target){
-            backgroundImg.src = "./assets/booth_layout/booth_layout_s_1.png"
+            backgroundImg.src = "./assets/booth_layout/booth_layout_s.png"
             mark.style.display = "";
             sponsor_logo.src = `./assets/sponsor/${target}.png`
+            silverSponsorList.forEach((sponsor)=>{
+                if(sponsor.id === target){
+                    sponsor.style.backgroundImage = `url(./assets/sponsor/${target}_1.png)`;
+                }
+            })
         }else{
-            backgroundImg.src = "./assets/booth_layout/booth_layout_s.png"
+            backgroundImg.src = "./assets/booth_layout/booth_layout_s_1.png"
             mark.style.display = "none";
         }
         silver_menu_container.style.display = "";
@@ -78,11 +97,16 @@ const target =  new URLSearchParams(window.location.search).get("target");
     }
     else if(sponsorGrade === "bronze"){
         if(target){
-            backgroundImg.src = "./assets/booth_layout/booth_layout_b_1.png"
+            backgroundImg.src = "./assets/booth_layout/booth_layout_b.png"
+            bronzeSponsorList.forEach((sponsor)=>{
+                if(sponsor.id === target){
+                    sponsor.style.backgroundImage = `url(./assets/sponsor/${target}_1.png)`;
+                }
+            })
             mark.style.display = "";
             sponsor_logo.src = `./assets/sponsor/${target}.png`
         }else{
-            backgroundImg.src = "./assets/booth_layout/booth_layout_b.png"
+            backgroundImg.src = "./assets/booth_layout/booth_layout_b_1.png"
             mark.style.display = "none";
         }
         bronze_menu_container.style.display = "";
@@ -97,7 +121,7 @@ const target =  new URLSearchParams(window.location.search).get("target");
             mark.style.display = "";
             sponsor_logo.src = `./assets/sponsor/${target}.png`
         }else{
-            backgroundImg.src = "./assets/booth_layout/booth_layout_etc.png"
+            backgroundImg.src = "./assets/booth_layout/booth_layout_etc_1.png"
             mark.style.display = "none";
         }
         standard_menu_container.style.display = "";
