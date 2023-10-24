@@ -1,5 +1,10 @@
 const detailMenuList = document.querySelectorAll(".detail_menu");
+const footer = document.querySelector(".footer")
 
+
+footer.addEventListener("click", ()=>{
+  window.location.href = "index.html"
+})
 
 detailMenuList.forEach((detailMenu)=>{
     detailMenu.addEventListener("click", ()=>{

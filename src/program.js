@@ -3,12 +3,19 @@
 const program_menu = document.querySelectorAll(".program_menu")
 const program_day_menu = document.querySelector(".subMenu")
 const detailMenuList = document.querySelectorAll(".detail_menu");
+const footer = document.querySelector(".footer")
+
 const day1 = document.querySelector(".day1");
 const day2 = document.querySelector(".day2");
 const day3 = document.querySelector(".day3");
 
 const program_1_btn = document.querySelector(".program_1_btn");
 const program_2_btn = document.querySelector(".program_2_btn")
+
+
+footer.addEventListener("click", ()=>{
+    window.location.href = "index.html"
+})
 
 program_1_btn.addEventListener("click", ()=>{
     window.location.href = "program.html"

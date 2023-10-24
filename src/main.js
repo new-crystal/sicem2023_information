@@ -1,12 +1,25 @@
 "use strict"
 
 const menuboxList = document.querySelectorAll(".main_menu");
+const background = document.querySelector(".background");
+const video = document.querySelector(".index_video");
+
+background.addEventListener("click", ()=>{
+  background.style.display = "none";
+})
 
 menuboxList.forEach((menu)=>{
     menu.addEventListener("click", ()=>{
         window.location.href = `${menu.id}.html`
     })
 })
+
+
+window.onload = ()=>{
+  background.style.display = "block"
+  video.play();
+}
+
 
     /**우클릭 방지 */
     document.addEventListener("contextmenu", function(event) {
@@ -26,3 +39,4 @@ menuboxList.forEach((menu)=>{
 document.addEventListener("selectstart", function (event) {
   event.preventDefault(); // 선택을 방지합니다.
 });
+

@@ -2,12 +2,17 @@ const program_menu_container = document.querySelector(".program_menu_container")
 const detailMenuList = document.querySelectorAll(".detail_menu");
 const programMenuList = document.querySelectorAll(".program_menu");
 const programList = document.querySelectorAll(".program")
+const footer = document.querySelector(".footer")
 
 const triggerList = document.querySelectorAll(".trigger")
 const toggleConList = document.querySelectorAll(".toggleCon")
 
 const program_1_btn = document.querySelector(".program_1_btn");
 const program_2_btn = document.querySelector(".program_2_btn");
+
+footer.addEventListener("click", ()=>{
+  window.location.href = "index.html"
+})
 
 program_1_btn.addEventListener("click", ()=>{
     window.location.href = "program.html"
@@ -120,13 +125,13 @@ function showScientificProgram(){
     else if(progoramTab === '7' && program.classList.value.includes("thyroid")){
       program.style.display = "";
     }
-    else if(progoramTab === '9' && program.classList.value.includes("clinical")){
+    else if(progoramTab === '8' && program.classList.value.includes("clinical")){
       program.style.display = "";
     }
-    else if(progoramTab === '10' && program.classList.value.includes("basic")){
+    else if(progoramTab === '9' && program.classList.value.includes("basic")){
       program.style.display = "";
     }
-    else if(progoramTab === '8' && program.classList.value.includes("bone")){
+    else if(progoramTab === '10' && program.classList.value.includes("bone")){
       program.style.display = "";
     }
     else if(progoramTab === '11' && program.classList.value.includes("pituitary")){
